@@ -1,0 +1,74 @@
+{
+  "name": "vue3-template",
+  "version": "1.0.0",
+  "author": "Niko",
+  "scripts": {
+    "dev": "vite --mode development",
+    "build": "vue-tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "build:dev": "vite build --mode development",
+    "build:pro": "vite build --mode production",
+    "serve": "vite preview",
+    "lint": "eslint src --fix --ext .ts,.tsx,.vue,.js,.jsx",
+    "prettier": "prettier --write .",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "@vueuse/components": "^8.1.2",
+    "@vueuse/core": "^8.1.2",
+    "axios": "^0.26.1",
+    "nprogress": "^0.2.0",
+    "pinia": "^2.0.12",
+    "vue": "^3.2.31",
+    "vue-router": "^4.0.14"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.22",
+    "@types/nprogress": "^0.2.0",
+    "@types/qs": "^6.9.7",
+    "@typescript-eslint/eslint-plugin": "^5.16.0",
+    "@typescript-eslint/parser": "^5.16.0",
+    "@vicons/fluent": "^0.12.0",
+    "@vitejs/plugin-vue": "^2.2.4",
+    "@vitejs/plugin-vue-jsx": "^1.3.8",
+    "autoprefixer": "^10.4.4",
+    "eslint": "^8.11.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-define-config": "^1.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-vue": "^8.5.0",
+    "husky": "^7.0.4",
+    "import": "^0.0.6",
+    "less": "^4.1.2",
+    "less-loader": "^10.2.0",
+    "lint-staged": "^12.3.7",
+    "naive-ui": "^2.27.0",
+    "postcss": "^8.4.12",
+    "postcss-px-to-viewport": "^1.1.1",
+    "prettier": "^2.6.0",
+    "rollup-plugin-visualizer": "^5.6.0",
+    "typescript": "^4.6.2",
+    "unplugin-auto-import": "^0.6.6",
+    "unplugin-icons": "^0.14.1",
+    "unplugin-vue-components": "^0.18.4",
+    "vite": "^2.8.6",
+    "vite-plugin-compression": "^0.5.1",
+    "vite-plugin-html": "^3.2.0",
+    "vite-plugin-pages": "^0.22.0",
+    "vite-plugin-restart": "^0.1.1",
+    "vite-plugin-style-import": "^2.0.0",
+    "vite-plugin-svg-icons": "^2.0.1",
+    "vue-tsc": "^0.33.7"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,vue,ts,tsx}": [
+      "yarn lint",
+      "prettier --write"
+    ]
+  }
+}
